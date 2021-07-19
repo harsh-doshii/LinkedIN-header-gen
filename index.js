@@ -50,6 +50,9 @@ document.getElementById("bg5").onclick = function () {
 document.getElementById("bg6").onclick = function () {
     img.src = "./assets/bg6.png"
 };
+document.getElementById("bg7").onclick = function () {
+    img.src = "./assets/bg7.png"
+};
 stage.add(layer);
 
 

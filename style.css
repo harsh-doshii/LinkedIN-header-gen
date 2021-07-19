@@ -128,7 +128,7 @@ button {
   margin: auto;
   margin-top: 50px;
   background-color: black;
-  border: 5px solid darkblue;
+  /* border: 5px solid darkblue; */
 }
 .backgrounds {
   /* margin: auto; */
