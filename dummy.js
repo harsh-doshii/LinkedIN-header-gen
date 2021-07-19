@@ -16,7 +16,7 @@ imageObjFlask.onload = function () {
     });
     layer.add(tr1);
     
-    var checkbox = document.querySelector("input[name=Flask-check]");
+    var checkbox = document.querySelector("input[name=flask-check]");
 
     checkbox.addEventListener('change', function () {
         if (this.checked) {
@@ -29,4 +29,4 @@ imageObjFlask.onload = function () {
     });
     transformers.push(tr1);
 };
-imageObjFlask.src = './assets/Flask.png';
+imageObjFlask.src = './assets/flask.png';

@@ -10,6 +10,7 @@ body {
 
 /* hero */
 .hero {
+  font-family: 'Work Sans', sans-serif;
   background: rgb(0, 151, 19, 0.1);
   border-radius: 10px;
   padding-top: 10px;
