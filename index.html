@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://unpkg.com/konva@8.1.1/konva.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <meta charset="utf-8" />
+    <title>LinkedIn header generator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<header>
+    <nav class="navbar">
+        <div class="title">LinkedIn Header Generator</div>
+    </nav>
+</header>
+<body>
+    <div id="container"></div>
+    <!-- <button id="listen">React</button>
+    <button id="remove-react">Remove React</button> -->
+    <div id="buttons"><button id="view" class="custom-btn btn-16">View</button><button id="save" class="custom-btn btn-16">Download</button> </div>
+
+    <section>
+        <h1>Add your skills</h1>
+        <div class="row">
+            <div class="item">
+                <h2>Languages</h2>
+                <div id="column1"></div>
+            </div>
+            <div class="item">
+                <h2 id="special">Frameworks and Libraries</h2>
+                <div id="column2"></div>
+            </div>
+            <div class="item">
+                <h2>Tools, DBs and Devops</h2>
+                <div id="column3"></div>
+            </div>
+        </div>
+    </section>
+    <script>
+        const languages = ["C","CPP","Java", "Python", "HTML", "CSS", "Javascript", "PHP",".NET","Swift", "Golang", "Ruby","SQL"];
+        const frameworks = ["Bootstrap", "React", "Angular", "NPM", "Node","Express", "Django","Rails","Laravel","Wordpress","Gulp","Flutter","Spring","Tensorflow","Flask"];
+        const devops = ["Github", "Docker", "Postgresql", "Redis", "MongoDB","MySQL","Hadoop","Drupal","Vim","Joomla","AWS","Heroku","Illustrator"];
+        let txt = "";
+        languages.forEach(myFunction);
+        document.getElementById("column1").innerHTML = txt;
+        function myFunction(value) {
+            if(value==".NET") {txt += "<label class=containerc>" + value + "<input type=checkbox name=net-check>" + "<span class=checkmark></span></label>" + "<br>";}
+            else txt += "<label class=containerc>" + value + "<input type=checkbox name=" + value.toLowerCase() + "-check>" + "<span class=checkmark></span></label>" + "<br>";
+        
+        }
+        txt = "";
+        frameworks.forEach(myFunction2);
+        document.getElementById("column2").innerHTML = txt;
+        function myFunction2(value) {
+            txt += "<label class=containerc>" + value + "<input type=checkbox name=" + value.toLowerCase() + "-check>" + "<span class=checkmark></span></label>" + "<br>";
+        }
+        txt = "";
+        devops.forEach(myFunction3);
+        document.getElementById("column3").innerHTML = txt;
+        function myFunction3(value) {
+            txt += "<label class=containerc>" + value + "<input type=checkbox name=" + value.toLowerCase() + "-check>" + "<span class=checkmark></span></label>" + "<br>";
+        }
+
+    </script>
+    <!-- <div>Git <input type="checkbox" name="git-check" /></div>
+    <div>C++ <input type="checkbox" name="cpp-check" /></div>
+    <div>Java<input type="checkbox" name="java-check" /></div>
+    <div>Docker <input type="checkbox" name="docker-check" /></div>
+    <div>React <input type="checkbox" name="react-check" /></div> -->
+    <section>
+        <h1>Select a background</h1>
+        <img id="bg2" src="./assets/bg2.png" onclick="myFunction()" class="backgrounds" />
+        <img id="bg" src="./assets/bg.png" onclick="myFunction()" class="backgrounds" />
+        <img id="bg3" src="./assets/bg3.png" onclick="myFunction()" class="backgrounds" />
+        <img id="bg4" src="./assets/bg4.png" onclick="myFunction()" class="backgrounds" />
+        <img id="bg5" src="./assets/bg5.png" onclick="myFunction()" class="backgrounds" />
+        <img id="bg6" src="./assets/bg6.png" onclick="myFunction()" class="backgrounds" />
+    </section>
+    <div class="footer">
+        <p>Made by Harsh Doshi</p>
+      </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
