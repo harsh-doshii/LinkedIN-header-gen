@@ -8,6 +8,34 @@ body {
   overflow-x: hidden;
 }
 
+/* hero */
+.hero {
+  background: rgb(0, 151, 19, 0.1);
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  margin: 10px;
+  transition: all ease-out 0.5s;
+}
+
+.hero::before {
+  content: '';
+  box-shadow: inset 0 0 0 3000px rgba(255, 255, 255, 0.1);
+  background: inherit;
+  filter: blur(10px);
+}
+.hero:hover {
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+  left: 90px;
+  top: 90px;
+}
+.hero:active {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  left: 98px;
+  top: 98px;
+}
+
 /* header and nav */
 header {
   height: 15vh;

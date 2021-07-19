@@ -1,12 +1,12 @@
-//Express
-var imageObjExpress = new Image();
-imageObjExpress.onload = function () {
-    var Express = new Konva.Image({
+//Flask
+var imageObjFlask = new Image();
+imageObjFlask.onload = function () {
+    var Flask = new Konva.Image({
         x: (Math.random() * 700),
         y: (Math.random() * 91),
         draggable: true,
-        image: imageObjExpress,
-        name: 'Express',
+        image: imageObjFlask,
+        name: 'Flask',
     });
     var tr1 = new Konva.Transformer({
         nodes: [],
@@ -16,17 +16,17 @@ imageObjExpress.onload = function () {
     });
     layer.add(tr1);
     
-    var checkbox = document.querySelector("input[name=express-check]");
+    var checkbox = document.querySelector("input[name=Flask-check]");
 
     checkbox.addEventListener('change', function () {
         if (this.checked) {
-            tr1.nodes([Express])
-            layer.add(Express);
+            tr1.nodes([Flask])
+            layer.add(Flask);
         } else {
             tr1.nodes([]);
-            Express.remove();
+            Flask.remove();
         }
     });
     transformers.push(tr1);
 };
-imageObjExpress.src = './assets/express.png';
+imageObjFlask.src = './assets/Flask.png';
